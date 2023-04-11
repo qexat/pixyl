@@ -1,12 +1,13 @@
+from typing import TextIO
 from pixyl.pixyl import Engine, FrameSequence
 
 
-def playground() -> int:
-    engine = Engine()
+def playground(file: TextIO, fps: float) -> int:
+    try:
+        engine = Engine()
+        fs = FrameSequence.from_file(file, 16, 16)
+        engine.render(fs, fps=fps)
 
-    with open("examples/test.afs", "r") as test_afs:
-        fs = FrameSequence.from_file(test_afs, 16, 16)
-
-    engine.render(fs, fps=4)
-
-    return 0
+        return 0
+    finally:
+        file.close()

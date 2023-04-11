@@ -1,6 +1,7 @@
-from argparse import ArgumentParser, Namespace
+from argparse import ArgumentParser, FileType, Namespace
 
 from pixyl.playground import playground
+from pixyl.utils import fps
 
 
 def parse_args(argv: list[str] | None = None) -> Namespace:
@@ -9,6 +10,8 @@ def parse_args(argv: list[str] | None = None) -> Namespace:
     subparsers = parser.add_subparsers(dest="command")
 
     playground_parser = subparsers.add_parser("playground")
+    playground_parser.add_argument("file", type=FileType("r"))
+    playground_parser.add_argument("--fps", type=fps, default=10)
 
     return parser.parse_args(argv)
 
@@ -18,7 +21,7 @@ def main_debug(argv: list[str] | None = None) -> int:
 
     match args.command:
         case "playground":
-            return playground()
+            return playground(args.file, args.fps)
         case _:
             pass
 

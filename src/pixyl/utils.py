@@ -132,3 +132,9 @@ def batched(iterable: Iterable[_T], n: int) -> Iterator[tuple[_T, ...]]:
 
     while batch := tuple(islice(iterator, n)):
         yield batch
+
+
+def fps(string: str) -> int:
+    if (r := int(string)) <= 0:
+        raise ValueError
+    return r
