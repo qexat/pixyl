@@ -36,7 +36,6 @@ The concept is pretty simple, it plays with ANSI and the box character `▀` bas
 
 ### How does it look like?
 
-ah you're too lazy to try by yourself lol\
-ignore the flickering lmao it's just my recording software tripping
+ah you're too lazy to try by yourself lol
 
 https://user-images.githubusercontent.com/43090614/231030955-a475ba65-ea68-4cc4-af9f-4cb7eb27c78e.mp4
