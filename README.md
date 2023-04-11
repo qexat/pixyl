@@ -36,4 +36,6 @@ The concept is pretty simple, it plays with ANSI and the box character `▀` bas
 ### How does it look like?
 
 ah you're too lazy to try by yourself lol\
-well uhhh video coming soon when I'll find a way to fix the issues with my recording software 💀
+ignore the flickering lmao it's just my recording software tripping
+
+![playground.mov](./assets/playground.mov)
