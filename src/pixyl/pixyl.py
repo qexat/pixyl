@@ -75,7 +75,10 @@ class FrameSequence(list[Frame]):
 
 
 class Engine:
-    def render(self, sequence: FrameSequence, *, fps: int = 6) -> None:
+    def render(self, sequence: FrameSequence, *, fps: float = 6) -> None:
+        if fps <= 0:
+            raise ValueError(f"{fps} is not a valid fps value")
+
         *frames, last_frame = sequence
         for frame in frames:
             print(frame, end=f"\x1b[{frame.height // 2}A")
