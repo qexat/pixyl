@@ -9,20 +9,19 @@ from pixyl.utils import Matrix, batched
 
 PixelColorInt = Literal[0, 1, 2, 3, 4, 5, 6, 7, 9]
 
-global valid_colors
-valid_colors = {0, 1, 2, 3, 4, 5, 6, 7, 9}
+VALID_COLORS = {0, 1, 2, 3, 4, 5, 6, 7, 9}
 
 
 class PixelColor(IntEnum):
-    Black = 0
-    Red = 1
-    Green = 2
-    Yellow = 3
-    Blue = 4
-    Magenta = 5
-    Cyan = 6
-    White = 7
-    No = 9
+    BLACK = 0
+    RED = 1
+    GREEN = 2
+    YELLOW = 3
+    BLUE = 4
+    MAGENTA = 5
+    CYAN = 6
+    WHITE = 7
+    NONE = 9
 
 
 class Frame:
@@ -33,19 +32,22 @@ class Frame:
     def matrix(self) -> Matrix[PixelColor]:
         return self.__matrix.clone()
 
+    @property
     def width(self) -> int:
         return self.matrix.width
 
+    @property
     def height(self) -> int:
         return self.matrix.height
 
+    @property
     def size(self) -> tuple[int, int]:
         return self.matrix.size
 
     @classmethod
     def from_int_matrix(cls, matrix: Matrix[int]) -> Self:
         # matrix.map() returns Matrix[PixelColor] but is incorrectly typed as returning Matrix[int]
-        transformed_flat: Matrix[PixelColor] = matrix.map(PixelColor, lambda pci: pci in valid_colors)  # type: ignore
+        transformed_flat: Matrix[PixelColor] = matrix.map(PixelColor, lambda pci: pci in VALID_COLORS)  # type: ignore
         return cls(transformed_flat)
 
     def __repr__(self) -> str:
@@ -66,19 +68,16 @@ class FrameSequence(list[Frame]):
 
         matrices: list[Matrix[int]] = [
             Matrix("".join(frame_rows), width, height).map(int, str.isdigit)
-            for frame_rows in batched(raw_contents, 8)
+            for frame_rows in batched(raw_contents, height)
         ]  # type: ignore
 
         return cls(Frame.from_int_matrix(matrix) for matrix in matrices)
 
 
 class Engine:
-    def __init__(self) -> None:
-        pass
-
     def render(self, sequence: FrameSequence, *, fps: int = 6) -> None:
         *frames, last_frame = sequence
         for frame in frames:
-            print(frame, end="\x1b[4A")
+            print(frame, end=f"\x1b[{frame.height // 2}A")
             time.sleep(1 / fps)
         print(last_frame)

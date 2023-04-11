@@ -21,8 +21,8 @@ class _ValueError(ValueError):
         return cls._incorrect_size(width, height, "big")
 
     @classmethod
-    def from_unsatisfied_guard(cls, el_x: int, el_y: int) -> Self:
-        return cls(f"element at {el_x, el_y} does not satisfy the guard function")
+    def from_unsatisfied_guard(cls, el_pos: tuple[int, int]) -> Self:
+        return cls(f"element at {el_pos} does not satisfy the guard function")
 
 
 class Matrix(Generic[_T]):
@@ -113,7 +113,7 @@ class Matrix(Generic[_T]):
         for flat_index, el in enumerate(flattened_src):
             if not guard(el):
                 pos_x, pos_y = divmod(flat_index, self.width)
-                raise _ValueError.from_unsatisfied_guard(pos_x, pos_y)
+                raise _ValueError.from_unsatisfied_guard((pos_x, pos_y))
             flattened_dest.append(function(el))
 
         return type(self)(flattened_dest, self.width, self.height)
@@ -123,7 +123,7 @@ def batched(iterable: Iterable[_T], n: int) -> Iterator[tuple[_T, ...]]:
     """
     Batch data into tuples of length n. The last batch may be shorter.
 
-    Recipe stolen from: <https://docs.python.org/fr/3/library/itertools.html>
+    Recipe stolen from: <https://docs.python.org/3/library/itertools.html>
     """
     if n < 1:
         raise ValueError("n must be higher or equal to 1")

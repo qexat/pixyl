@@ -5,8 +5,8 @@ def playground() -> int:
     engine = Engine()
 
     with open("examples/test.afs", "r") as test_afs:
-        fs = FrameSequence.from_file(test_afs, 8, 8)
+        fs = FrameSequence.from_file(test_afs, 16, 16)
 
-    engine.render(fs, fps=3)
+    engine.render(fs, fps=1)
 
     return 0
