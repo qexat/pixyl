@@ -38,4 +38,4 @@ The concept is pretty simple, it plays with ANSI and the box character `▀` bas
 ah you're too lazy to try by yourself lol\
 ignore the flickering lmao it's just my recording software tripping
 
-![playground.mov](./assets/playground.mov)
+![playground.mov](./assets/playground.mp4)
