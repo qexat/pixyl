@@ -31,6 +31,7 @@ The concept is pretty simple, it plays with ANSI and the box character `▀` bas
 ### What is `test.afs` and what does AFS stand for?
 
 `test.afs` is the file used in the playground.\
+
 `AFS` stands for ANSI Frame Sequence I think, I don't remember what I made up lmao
 
 ### How does it look like?
@@ -38,4 +39,4 @@ The concept is pretty simple, it plays with ANSI and the box character `▀` bas
 ah you're too lazy to try by yourself lol\
 ignore the flickering lmao it's just my recording software tripping
 
-https://user-images.githubusercontent.com/43090614/231023381-6ff0faed-374c-4453-83d0-417aeb304cd1.mp4
+https://user-images.githubusercontent.com/43090614/231030955-a475ba65-ea68-4cc4-af9f-4cb7eb27c78e.mp4
