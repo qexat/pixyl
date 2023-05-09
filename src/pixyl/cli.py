@@ -1,4 +1,6 @@
-from argparse import ArgumentParser, FileType, Namespace
+from argparse import ArgumentParser
+from argparse import FileType
+from argparse import Namespace
 
 from pixyl.playground import playground
 from pixyl.utils import fps

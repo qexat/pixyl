@@ -1,5 +1,7 @@
 from typing import TextIO
-from pixyl.pixyl import Engine, FrameSequence
+
+from pixyl.pixyl import Engine
+from pixyl.pixyl import FrameSequence
 
 
 def playground(file: TextIO, fps: float) -> int:
