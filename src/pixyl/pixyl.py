@@ -1,10 +1,13 @@
+import time
 from enum import IntEnum
 from functools import cached_property
 from io import StringIO
-import time
-from typing import Literal, Self, TextIO
+from typing import Literal
+from typing import Self
+from typing import TextIO
 
-from pixyl.utils import Matrix, batched
+from pixyl.utils import batched
+from pixyl.utils import Matrix
 
 
 PixelColorInt = Literal[0, 1, 2, 3, 4, 5, 6, 7, 9]

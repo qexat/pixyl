@@ -1,7 +1,12 @@
-from collections.abc import Callable, Iterable, Iterator
+from collections.abc import Callable
+from collections.abc import Iterable
+from collections.abc import Iterator
 from io import StringIO
 from itertools import islice
-from typing import Generic, Literal, Self, TypeVar
+from typing import Generic
+from typing import Literal
+from typing import Self
+from typing import TypeVar
 
 _T = TypeVar("_T")
 _U = TypeVar("_U")
