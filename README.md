@@ -1,7 +1,6 @@
 # Pixyl
 
-Pixyl is a terminal-based frame render "engine".\
-Dependencies: currently zero 😎 (except `python3.11`)
+Pixyl is a terminal-based frame render "engine".
 
 > ⚠️ uhhh it's unfinished software but it kind of works ig
 
@@ -13,7 +12,7 @@ Then, run:
 
 ```sh
 pip install -e .
-pixyl playground examples/test2.afs
+pixyl examples/test.pxsf
 ```
 
 ## F.A.Q
@@ -28,14 +27,14 @@ but it's better with an ending "l" imo
 
 The concept is pretty simple, it plays with ANSI and the box character `▀` basically
 
-### What is `test.afs` and what does AFS stand for?
+### What does PXSF stand for?
 
-`test.afs` is the file used in the playground.\
-
-`AFS` stands for ANSI Frame Sequence I think, I don't remember what I made up lmao
+`PXSF` stands for **P**i**X**yl **S**equence **F**ormat 😎
 
 ### How does it look like?
 
+(uhhh this section is outdated)
+
 ah you're too lazy to try by yourself lol
 
-https://user-images.githubusercontent.com/43090614/231030955-a475ba65-ea68-4cc4-af9f-4cb7eb27c78e.mp4
+<https://user-images.githubusercontent.com/43090614/231030955-a475ba65-ea68-4cc4-af9f-4cb7eb27c78e.mp4>
