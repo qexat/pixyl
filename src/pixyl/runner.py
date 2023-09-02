@@ -3,9 +3,9 @@ import sys
 import typing
 
 import result
-
-from pixyl.engine import Engine, SizeFactor
 from pixyl.data import FrameSequence
+from pixyl.engine import Engine
+from pixyl.engine import SizeFactor
 
 
 def run_file(file: typing.BinaryIO, *, fps: float, factor: SizeFactor) -> int:

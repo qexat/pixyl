@@ -1,14 +1,13 @@
 # pyright: reportUnusedCallResult = false
-
 import dataclasses
 import io
 import time
 import typing
 
 import coquille
-
 from pixyl.constants import VALID_FACTORS
-from pixyl.data import FrameSequence, Matrix
+from pixyl.data import FrameSequence
+from pixyl.data import Matrix
 from pixyl.utils import batched
 
 

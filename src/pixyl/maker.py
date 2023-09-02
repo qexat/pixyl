@@ -1,9 +1,10 @@
 # pyright: reportUnusedCallResult = false
-
 import io
 import typing
 
-from pixyl.constants import MAGIC_NUMBER, START_OF_CONTENT, START_OF_HEADING
+from pixyl.constants import MAGIC_NUMBER
+from pixyl.constants import START_OF_CONTENT
+from pixyl.constants import START_OF_HEADING
 
 
 def create_pxsf(

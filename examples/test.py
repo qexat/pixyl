@@ -1,7 +1,6 @@
 """
 Script to generate `test.pxsf`.
 """
-
 import os
 
 from pixyl.maker import create_pxsf

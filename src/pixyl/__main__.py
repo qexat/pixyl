@@ -1,8 +1,7 @@
 # pyright: reportUnusedCallResult = false
-
 import argparse
-from pixyl.constants import VALID_FACTORS
 
+from pixyl.constants import VALID_FACTORS
 from pixyl.runner import run_file
 from pixyl.utils import fps
 

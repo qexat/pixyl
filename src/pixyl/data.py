@@ -1,5 +1,4 @@
 # pyright: reportUnusedCallResult = false
-
 from __future__ import annotations
 
 import array
@@ -10,8 +9,10 @@ import io
 import typing
 
 import result
-
-from pixyl.constants import HEADER_SEP, MAGIC_NUMBER, START_OF_CONTENT, START_OF_HEADING
+from pixyl.constants import HEADER_SEP
+from pixyl.constants import MAGIC_NUMBER
+from pixyl.constants import START_OF_CONTENT
+from pixyl.constants import START_OF_HEADING
 from pixyl.utils import batched
 
 T = typing.TypeVar("T")
@@ -129,7 +130,7 @@ class Parser:
                 width,
                 height,
                 data_source,
-            )
+            ),
         )
 
 
