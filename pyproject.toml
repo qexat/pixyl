@@ -17,6 +17,8 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
 ]
 
+dependencies = ["numpy==1.25.2", "result==0.13.1", "coquille==1.2.1"]
+
 [project.scripts]
 pixyl = "pixyl:__main__.main"
 
