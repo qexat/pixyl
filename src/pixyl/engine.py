@@ -79,3 +79,6 @@ class Engine:
 
             height = last_non_empty_buffer_height
             print(f"\x1b[{height}B")
+
+        # see: <https://github.com/qexat/pixyl/issues/10>
+        coquille.apply("show_cursor")
